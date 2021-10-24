@@ -1,0 +1,20 @@
+html, body{
+    padding: 0;
+    margin: 0;
+}
+#zoneDePepega{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+}
+
+#zoneDePepega .pepega{
+    position: absolute;
+}
+
+#zoneDePepega .pepega img{
+    width: 100px;
+}
+#zoneDePepega .goldenPepega img{
+    width: 150px;
+}
