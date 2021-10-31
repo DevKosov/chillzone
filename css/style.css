@@ -186,23 +186,52 @@ span.animate3 {
     }
 }
 
-
 #zoneDePepega{
     position: fixed;
     top:0;
     width: 100vw;
     height: 100vh;
-    z-index: 100000;
+    background: transparent;
+    z-index: 100;
 }
 #zoneDePepega .pepega{
     transform: scale(0);
+    z-index: 100000;
 }
+#zoneDePepega .goldenPepega{
+    transform: scale(0);
+}
+#zoneDePepega .animation{
+    transform: scale(1);
+    animation: 3s pepegaRotation forwards;
+}
+
+#zoneDePepega .animationgolden{
+    transform: scale(1);
+    animation:10s pepegaRotation forwards;
+}
+#zoneDePepega .animationplatinium{
+    transform: scale(1);
+    animation:30s pepegaRotation forwards;
+}
+
+
+#zoneDePepega .platiniumPepega{
+    transform: scale(0);
+}
+#zoneDePepega .platiniumPepega{
+    transform: scale(1);
+    animation:10s pepegaRotation forwards;
+}
+
 #zoneDePepega .pepega img{
     width: 125px;
 }
 #zoneDePepega .goldenPepega img{
     width: 175px;
-    transform: scale(0);
+}
+#zoneDePepega .platiniumPepega img{
+    width: 220px;
 }
 
 @keyframes pepegaRotation {

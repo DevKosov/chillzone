@@ -30,8 +30,10 @@ function getpoint2D2(point2){
     return point2;
 }
 
-let isGolden = 2;
+let isGolden = 1;
+let isPlatinium = 3;
 let numbah2;
+let numbah;
 const point2D2 = {
     "X" : 0,
     "Y" : 0
@@ -40,49 +42,56 @@ const point2D2 = {
 let zonePepegaHtml2 = document.getElementById('zoneDePepega');
 
 function spawnDaPepegas() {
+    numbah = getRandomnumbah2(0, 10000);
+    numbah2 = getRandomnumbah2(0, 1000);
+    if (numbah == isPlatinium) {
+        ReactDOM.unmountComponentAtNode(zonePepegaHtml2);
 
-    let dd3 = 0;
-    numbah2 = getRandomnumbah2(0,1000);
-    if (numbah2 == isGolden){
+        console.log("isPlatinium");
+
+        getpoint2D2(point2D2);
+
+        const isPlatiniumPepega = <a id="platiniumPepega" target="_blank" href="https://www.youtube.com/watch?v=_EnC2Ut_lHE&ab_channel=TikTokFunny" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="photos/platinium.png" alt="pepega" /></a>;
+
+        ReactDOM.render(
+            isPlatiniumPepega,
+            zonePepegaHtml2
+        );
+        document.getElementById("platiniumPepega").classList.add("animationplatinium");
+
+        setTimeout(spawnDaPepegas, 30000);
+
+    } else if (numbah2 == isGolden) {
+        
+        ReactDOM.unmountComponentAtNode(zonePepegaHtml2);
+
         console.log("isGolden");
 
         getpoint2D2(point2D2);
 
-        const isGoldenPepega = <a id="goldenpepega" target="_blank" href="https://www.youtube.com/watch?v=JH642hpJtFs" style={{position:"absolute",top: point2D2.Y + 'px', right: point2D2.X + "px"}} class="goldenPepega"><img src="photos/golden.png" alt="pepega"/></a>;
-        
+        const isGoldenPepega = <a id="goldenpepega" target="_blank" href="https://www.youtube.com/watch?v=JH642hpJtFs" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="photos/golden.png" alt="pepega" /></a>;
+
         ReactDOM.render(
             isGoldenPepega,
             zonePepegaHtml2
-          );
-          document.getElementById("goldenpepega").style.animation = " 10000ms pepegaRotation forwards"; 
+        );
+        document.getElementById("goldenpepega").classList.add("animationgolden");
 
-        setTimeout(spawnDaPepegas,10000);
-    }else{
+        setTimeout(spawnDaPepegas, 10000);
+    } else {
         console.log("isNotGolden");
         getpoint2D2(point2D2);
-        dd3 = 0;
+        ReactDOM.unmountComponentAtNode(zonePepegaHtml2);
 
-      /*   if (dd3 == 0){
-            const normalPepega2 = <a id="pepega2" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{position:"absolute",top: point2D2.Y + 'px', right: point2D2.X + "px"}} class="pepega"><img src="photos/pepega.png" alt="pepega"/></a>;
-        }else{
-            const normalPepega2 = <a id="pepega" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{position:"absolute",top: point2D2.Y + 'px', right: point2D2.X + "px"}} class="pepega"><img src="photos/pepega.png" alt="pepega"/></a>;
-            dd3 = 0;
-        } */
-            const normalPepega2 = <a id="pepega" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{position:"absolute",top: point2D2.Y + 'px', right: point2D2.X + "px"}} class="pepega"><img src="photos/pepega.png" alt="pepega"/></a>;
+        const normalPepega2 = <a id="pepega" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="pepega"><img src="photos/pepega.png" alt="pepega" /></a>;
 
-        dd3 = 1;
-        
         ReactDOM.render(
             normalPepega2,
             zonePepegaHtml2
-          );
+        );
 
-          document.getElementById("pepega").style.animation = " 3000ms pepegaRotation forwards";
-
-        /* document.getElementById('pepega').addEventListener('animationend', () => {
-            spawnDaPepegas();
-        }); */
-        setTimeout(spawnDaPepegas,3000);
+        document.getElementById("pepega").classList.add("animation");
+        setTimeout(spawnDaPepegas, 3000);
     }
 }
 spawnDaPepegas();
