@@ -51,7 +51,7 @@ function spawnDaPepegas() {
 
         getpoint2D2(point2D2);
 
-        const isPlatiniumPepega = <a id="platiniumPepega" target="_blank" href="https://www.youtube.com/watch?v=_EnC2Ut_lHE&ab_channel=TikTokFunny" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="photos/platinium.png" alt="pepega" /></a>;
+        const isPlatiniumPepega = <a id="platiniumPepega" target="_blank" href="https://www.youtube.com/watch?v=_EnC2Ut_lHE&ab_channel=TikTokFunny" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="chillzone/photos/platinium.png" alt="pepega" /></a>;
 
         ReactDOM.render(
             isPlatiniumPepega,
@@ -69,7 +69,7 @@ function spawnDaPepegas() {
 
         getpoint2D2(point2D2);
 
-        const isGoldenPepega = <a id="goldenpepega" target="_blank" href="https://www.youtube.com/watch?v=JH642hpJtFs" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="photos/golden.png" alt="pepega" /></a>;
+        const isGoldenPepega = <a id="goldenpepega" target="_blank" href="https://www.youtube.com/watch?v=JH642hpJtFs" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="goldenPepega"><img src="chillzone/photos/golden.png" alt="pepega" /></a>;
 
         ReactDOM.render(
             isGoldenPepega,
@@ -83,7 +83,7 @@ function spawnDaPepegas() {
         getpoint2D2(point2D2);
         ReactDOM.unmountComponentAtNode(zonePepegaHtml2);
 
-        const normalPepega2 = <a id="pepega" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="pepega"><img src="photos/pepega.png" alt="pepega" /></a>;
+        const normalPepega2 = <a id="pepega" target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" style={{ position: "absolute", top: point2D2.Y + 'px', right: point2D2.X + "px" }} class="pepega"><img src="chillzone/photos/pepega.png" alt="pepega" /></a>;
 
         ReactDOM.render(
             normalPepega2,
